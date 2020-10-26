@@ -59,7 +59,7 @@ func (s *BServer) Start() {
 		log.Println("Starting server on port " + os.Getenv("SERVER_PORT"))
 		err := s.serv.ListenAndServe()
 		if err != nil {
-			log.Fatal("Error starting orbiter service: %s\n", err)
+			log.Fatal("Error starting server: %s\n", err)
 			os.Exit(1)
 		}
 	}()
