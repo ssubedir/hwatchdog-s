@@ -1,4 +1,8 @@
-# app
+# UI Dashboard
+
+
+
+# Dev
 
 ## Project setup
 ```
@@ -15,5 +19,10 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Docker
+
+Build Image: ``docker build -t hwatchdog-ui .``
+
+Run Container: ``docker run -d -p 9002:80 hwatchdog-ui`` on port 9002
+
+You can access the Hwatchdog ui on port 9002

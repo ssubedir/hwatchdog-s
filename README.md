@@ -24,7 +24,7 @@ Build Image: ``docker build -t hwatchdog-s .``
 
 Run Container: ``docker run -d -p 9001:9001 --restart=always hwatchdog-s`` on port 9001
 
-You can access the Hwatchdog ui on port 9001
+
 
 
 
