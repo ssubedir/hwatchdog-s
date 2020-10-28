@@ -1,14 +1,21 @@
 version: '3'
+networks:
+    local:
+        driver: bridge
 services:
     hwatchdog:
         image: hwatchdog-s:latest
         container_name: wdss
         ports: 
             - 9001:9001
+        networks: 
+            - local
     ui:
         image: hwatchdog-ui:latest
         container_name: wdui
         ports: 
             - 9002:80
+        networks: 
+            - local
 
 

@@ -116,7 +116,10 @@ export default {
     fetchdata() {
         var filt = JSON.parse(localStorage.hwfilter);
         console.log(filt);
-      fetch("http://localhost:9001/api/"+filt.site+"?location="+filt.location)
+
+      var docker = process.env.VUE_APP_DOCKER_SERVER
+
+      fetch("http://"+docker+":9001/api/"+filt.site+"?location="+filt.location)
         .then((response) => response.json())
         .then((data) => {
           this.hdata = data;
